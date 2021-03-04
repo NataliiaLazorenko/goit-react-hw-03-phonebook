@@ -1,0 +1,37 @@
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.contact-name {
+  margin-right: 15px;
+  font-weight: 500;
+}
+
+.button {
+  padding: 5px 30px;
+  font-weight: 700;
+
+  cursor: pointer;
+  color: #299e67;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #1d774d;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button:focus,
+.button:hover {
+  background-color: #cff3e2;
+  outline: transparent;
+  box-shadow: 0px 2px 2px rgb(0, 0, 0, 0.12), 0px 1px 2px rgb(0, 0, 0, 0.8),
+    0px 3px 1px rgb(0, 0, 0, 0.1);
+}
