@@ -43,7 +43,7 @@ class ContactForm extends Component {
 
     return (
       <form onSubmit={this.handleSubmit} className={styles.form}>
-        <label className={styles['form-label']}>
+        <label className="label">
           Name
           <input
             type="text"
@@ -51,10 +51,10 @@ class ContactForm extends Component {
             name="name"
             value={name}
             onChange={this.handleChange}
-            className={styles['form-input']}
+            className="input-field"
           />
         </label>
-        <label className={styles['form-label']}>
+        <label className="label">
           Phone Number
           <input
             type="tel"
@@ -62,13 +62,13 @@ class ContactForm extends Component {
             name="number"
             value={number}
             onChange={this.handleChange}
-            className={styles['form-input']}
+            className="input-field"
           />
         </label>
         <button
           type="submit"
-          className={styles.button}
-          disabled={name === '' ? true : false}
+          className={[`button ${styles['form-btn']}`]}
+          disabled={name === '' || number === '' ? true : false}
         >
           Add contact
         </button>
